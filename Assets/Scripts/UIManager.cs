@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     [Header("Intro Scene", order = 1)]
     public GameObject imgIntro;
     public GameObject btnBack;
-    public GameObject  btnNext;
+    public GameObject btnNext;
     public TMP_Text txtIntro;
     [Space(2f)]
     [Header("Tutorial Scene", order = 2)]
