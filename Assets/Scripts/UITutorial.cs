@@ -29,7 +29,7 @@ public class UITutorial : MonoBehaviour
     public GameObject btnWrong3;
 
     public GameObject btnHome;
-    public GameObject btnBack;
+   // public GameObject btnBack;
     public GameObject btnNext;
 
     private int quizQuestion = 0;
@@ -137,8 +137,14 @@ public class UITutorial : MonoBehaviour
             case 0:
                 QuizTime(false);
                 txtMid.text = "What's inside our bodies? In this game, you'll find out!\n\nClick next to learn how to play.";
-                btnBack.SetActive(false);
+              //  btnBack.SetActive(false);
                 btnNext.SetActive(true);
+
+                imgDragSquare.SetActive(false);
+
+                imgSquare.SetActive(false);
+                imgCircle.SetActive(false);
+                imgTriangle.SetActive(false);
                 break;
             case 1:
                 txtQuestion.text = "You're going to be drag and dropping a lot. Let's start off with a sample problem:\nDrag and drop the shape into the correct hole.";
@@ -146,9 +152,8 @@ public class UITutorial : MonoBehaviour
                 imgDragSquare.SetActive(true);
                 imgHead.transform.position = new Vector3(-1000, -1000, 0);
                 btnNext.SetActive(false);
-                btnBack.SetActive(true);
+       //         btnBack.SetActive(true);
                 imgDragSquare.transform.position = origin;
-                imgDragSquare.SetActive(true);
 
                 imgSquare.SetActive(true);
                 imgCircle.SetActive(true);
@@ -160,6 +165,8 @@ public class UITutorial : MonoBehaviour
                 ChangeOrder(btnWrong2, btnWrong3, btnRight, btnWrong1);
                 imgCircle.SetActive(false);
                 imgTriangle.SetActive(false);
+                 imgDragSquare.SetActive(true);
+                imgSquare.SetActive(true);
                 break;
             case 3:
                 QuizTime(false);
@@ -186,6 +193,8 @@ public class UITutorial : MonoBehaviour
             case 5:
                 ChangeOrder(btnWrong2, btnWrong3, btnWrong1, btnRight);
                 QuizTime(true);
+                imgHead.SetActive(true);
+                imgBody.SetActive(true);
                 break;
             case 6:
                 txtMid.text = "\n\n\nYou are now done with the tutorial.\nAre you ready to start the game?";
@@ -198,7 +207,7 @@ public class UITutorial : MonoBehaviour
                 imgBody.SetActive(false);
                 imgHeadOutline.SetActive(false);
               
-                btnBack.SetActive(false);
+               // btnBack.SetActive(false);
 
                 break;
             case 7:
